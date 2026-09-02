@@ -1,0 +1,16 @@
+langchain
+langchain-core
+langchain-google-genai
+langchain-community
+langchain-text-splitters
+langchain-groq
+google-generativeai
+python-dotenv 
+python-multipart
+hf-xet
+pydantic
+ipykernel
+streamlit
+fastapi
+uvicorn
+jinja2
