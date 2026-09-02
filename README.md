@@ -1,37 +1,21 @@
-\# DocMind — A Citation-Aware RAG System for Question Answering over Technical Documents
-
-
-
-Then one sentence:
-
-
+# DocMind — A Citation-Aware RAG System for Question Answering over Technical Documents
 
 A Retrieval-Augmented Generation system that answers questions from technical PDFs using semantic retrieval, reranking, and source-grounded generation.
 
-
-
-\### Problem Statement
+### Problem Statement
 
 This project explores whether a RAG pipeline can provide accurate answers while explicitly showing the document passages used to generate each response.
 
-
-
-\### Project Objective
+### Project Objective
 
 Objective: Build a question-answering system that:
 
-
-
-* retrieves relevant document chunks for a user query,
-* generates an answer using an LLM,
-* provides citations to the retrieved sources,
+* retrieves relevant document chunks for a user query
+* generates an answer using an LLM
+* provides citations to the retrieved sources
 * minimizes unsupported/hallucinated responses.
 
-
-
-\### Key Features
-
-
+### Key Features
 
 * Semantic document retrieval
 * Hybrid search
