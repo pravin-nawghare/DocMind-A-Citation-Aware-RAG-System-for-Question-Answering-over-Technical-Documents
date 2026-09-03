@@ -7,6 +7,7 @@ from langchain_docling import DoclingLoader
 from docling.chunking import HybridChunker
 from transformers import AutoTokenizer
 from docling_core.transforms.chunker.tokenizer.huggingface import HuggingFaceTokenizer
+from components.utils import initiate_tokenizer
 
 json_storage_path = Path("output.json") 
 data_storage_directory = Path("storage")
@@ -52,27 +53,6 @@ def _load_into_json(document_loader, json_file_path: Path):
         docs_lazy = pdf_loader.lazy_load()
         documents = []
 
-#  When user wants to control what get stored in metadata
-#         ALLOWED_METADATA = {
-#     "filename",
-#     "page_number",
-#     "category",
-#     "element_id",
-#     "document_type",
-#     "department",
-# }
-
-# for doc in loader.lazy_load():
-
-#     doc.metadata["document_type"] = "financial_report"
-#     doc.metadata["department"] = "finance"
-
-#     doc.metadata = {
-#         key: value
-#         for key, value in doc.metadata.items()
-#         if key in ALLOWED_METADATA
-#     }
-
         for doc in docs_lazy:
             # to add custom metadata
             # doc.metadata["department"] = "finance"
@@ -84,7 +64,7 @@ def _load_into_json(document_loader, json_file_path: Path):
 
         with open(json_file_path, "w", encoding="utf-8") as f:
             json.dump(documents, f, ensure_ascii=False, indent=2) 
-            print("pdf data dumped into json file successfully:", json_file_path)
+        print("pdf data dumped into json file successfully:", json_file_path)
 
     except Exception as e:
         print(f"An error occurred while parsing PDF files: {str(e)}")
