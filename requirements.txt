@@ -3,7 +3,9 @@ langchain-core
 langchain-google-genai
 langchain-community
 langchain-text-splitters
+langchain-docling
 langchain-groq
+langchain-unstructured[local]
 google-generativeai
 python-dotenv 
 python-multipart
@@ -14,3 +16,6 @@ streamlit
 fastapi
 uvicorn
 jinja2
+huggingface-hub
+sentence-transformers
+docling

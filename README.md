@@ -2,6 +2,8 @@
 
 A Retrieval-Augmented Generation system that answers questions from technical PDFs using semantic retrieval, reranking, and source-grounded generation.
 
+---
+
 ## 1. Problem Statement
 
 This project explores whether a RAG pipeline can provide accurate answers while explicitly showing the document passages used to generate each response.
